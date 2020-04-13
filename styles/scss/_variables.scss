@@ -1,16 +1,36 @@
+/*Import Moderat Bold*/
 @font-face {
     font-family: "Moderat Bold";
-    src: url("fonts/moderatbold.otf") format("otf");
+    src: url("/styles/fonts/ModeratBold.otf") format("opentype");
     font-weight: 700;
 }
 @mixin ModeratBold {
     font-family: "Moderat Bold";
     font-weight: 700;
 }
+/*Import Moderat Regular*/
+@font-face {
+    font-family: "Moderat Regular";
+    src: url("/styles/fonts/ModeratRegular.otf") format("opentype");
+    font-weight: 400;
+}
+@mixin ModeratRegular {
+    font-family: "Moderat Regular";
+    font-weight: 400;
+}
+/*Style H1*/
 @mixin h1 {
     @include ModeratBold;
-    font-size: 3.6em;
+    font-size: 4em;
 }
+/*Style H2*/
+@mixin h2{
+    @include ModeratBold;
+    font-size: 3em;
+}
+
+/*Couleurs*/
 $black: #000;
 $white: #fff;
 $accent: #DC7855;
+$bleu: #2F80ED;

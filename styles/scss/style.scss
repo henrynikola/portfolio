@@ -2,9 +2,34 @@
 
 body{
     font-size: 10pt;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1440px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden{
+    display: none;
+}
+
+.accent{
+    color: $accent;
 }
 
 h1{
     color:$black;
     @include h1;
 }
+
+h2{
+    color:$accent;
+    @include h2;
+}
+
+@import '_nav.scss';
+@import '_social.scss';
+@import '_footer.scss';

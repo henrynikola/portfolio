@@ -1,0 +1,187 @@
+.footer{
+    width: 100%;
+    margin-top: 10em;
+}
+
+.footer_block{
+    width: 1170px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15em;
+
+    img{
+        margin-bottom: 8em;
+    }
+}
+
+.footer_content{
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.footer_title{
+    color:$black;
+    margin: 0;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    &::after{
+        content: "";
+        background-image: url(/img/emoji/happy.png);
+        background-size: cover;
+        display: inline-block;
+        width: 70px;
+        height: 65px;
+    }
+}
+
+.contact{
+    height: 10em;
+    margin-top: 5em;
+}
+
+.social_row{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+}
+
+.mail{
+    color: $accent;
+    @include ModeratBold;
+    font-size: 2em;
+    text-decoration: none;
+    margin-bottom: 5em;
+
+    &::before{
+        content: url(/img/icons/mail.svg);
+        margin-right: .5em;
+    }
+    &::after{
+        content: "";
+        width: 350px;
+        height: 5px;
+        display: block;
+        position: absolute;
+        border-bottom: 2px solid $black;
+    }
+}
+
+.typeform_link{
+    width: 300px;
+    height: 60px;
+    background-color: $bleu;
+    border-radius: 30px;
+    margin-top: 5em;
+
+    a{
+        color: $white;
+        text-decoration: none;
+        @include ModeratBold;
+        font-size: 1.5em;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:after{
+            content: url(/img/icons/external_link_white.svg);
+            margin-left: .3em;
+        }
+    }
+}
+
+.location{
+    width: 330px;
+    height: 270px;
+    background-color: $accent;
+    color: $white;
+    
+    &>div{
+        position: relative;
+        margin-top: 5em;
+        margin-left: 5em;
+    }
+
+    div::before{
+        content: url(/img/icons/location.svg);
+        position: absolute;
+        left: -2em;
+    }
+
+    h3{
+        margin: 0;
+        margin-bottom: .5em;
+        @include ModeratBold;
+        font-size: 1.5em;
+    }
+
+    p{
+        margin: 0 0 .5em 0;
+        @include ModeratRegular;
+        font-style: normal;
+        font-size: 1em;
+    }
+    a{
+        text-decoration: none;
+        color: $white;
+        @include ModeratRegular;
+        display: block;
+        margin-top: 2.5em;
+        font-style: normal;
+    }
+}
+
+.footer_credits{
+    background-color: $black;
+    color:$white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 20em;
+
+    p{
+        margin: 0;
+        @include ModeratBold;
+        font-size: 1.5em;
+    }
+    .heart{
+        display: inline-block;
+        width: 18px;
+        &::after{
+            content: "";
+            background-image: url(/img/icons/heart.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+    }
+    .copyright{
+        display: inline-block;
+        width: 18px;
+        &::after{
+            content: "";
+            background-image: url(/img/icons/copyright.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

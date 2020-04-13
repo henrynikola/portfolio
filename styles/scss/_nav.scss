@@ -1,0 +1,57 @@
+.nav{
+    height: 75px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+
+    &>.container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a{
+        text-decoration: none;
+        color: $black;
+        @include ModeratRegular;
+        font-size: 1.5em;
+        text-transform: capitalize;
+    }
+    .home_link{
+        @include ModeratBold;
+        font-size: 2em;
+    }
+}
+
+.nav_links{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    list-style: none;
+
+    li{
+        display: flex;
+        align-items: center;
+    }
+    li:nth-child(2){
+        &::after{
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-image: url(/img/icons/chevron.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    li:last-child{
+        &::after{
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-image: url(/img/icons/external_link.svg);
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+    }
+}
