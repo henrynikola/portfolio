@@ -1,4 +1,17 @@
+@font-face {
+  font-family: "Moderat Bold";
+  src: url("fonts/moderatbold.otf") format("otf");
+  font-weight: 700;
+}
+
+body {
+  font-size: 10pt;
+}
+
 h1 {
-  color: red;
+  color: #000;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 3.6em;
 }
 /*# sourceMappingURL=style.css.map */
