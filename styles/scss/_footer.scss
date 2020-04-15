@@ -30,6 +30,7 @@
     font-size: 3rem;
     display: flex;
     align-items: center;
+    @include ModeratBold;
     &::after{
         content: "";
         background-image: url(/img/emoji/happy.png);
@@ -156,7 +157,7 @@
     p{
         margin: 0;
         @include ModeratBold;
-        font-size: 1.5em;
+        font-size: 1.125rem;
     }
     .heart{
         display: inline-block;

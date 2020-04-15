@@ -1,0 +1,529 @@
+.content{
+    margin: 0;
+    padding: 0;
+}
+
+/*-----LANDING-----*/
+
+.landing{
+    width: 50vw;
+    margin: 12em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    position: relative;
+
+    h1{
+        margin: 0;
+        font-size: 4rem;
+        &::before{
+            content: url(/img/emoji/hello.gif);
+            position: absolute;
+            left: -1em;
+        }
+    }
+}
+
+.details{
+    font-size: 2.5rem;
+    @include ModeratRegular;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2{
+        font-size: 3rem;
+        @include ModeratRegular;
+        margin: 0;
+    }
+
+    p{
+        margin: 0;
+    }
+}
+
+.chocolate::after{
+    content: url(/img/emoji/chocolate.png);
+    margin-left: .3em;
+}
+
+.resume{
+    display: flex;
+
+    &>a{
+        color: $black;
+        text-decoration: none;
+        font-size: 1.125rem;
+        @include ModeratBold;
+        margin-left: 2em;
+        align-self: center;
+        position: relative;
+
+        &:hover{
+            &::before{
+                content: "";
+                width: 100%;
+                border-bottom: 3px solid #000000;
+                position: absolute;
+                bottom: -.5em;
+            }
+        }
+
+        &::after{
+            content: url(/img/icons/external_link.svg);
+            margin-left: .5em;
+        }
+    }
+}
+
+.download_resume{
+    width: 300px;
+    height: 60px;
+    background-color: $bleu;
+    border-radius: 30px;
+    transition: all .5s;
+
+    a{
+        width: 100%;
+        height: 100%;
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include ModeratBold;
+        font-size: 1.125rem;
+
+        &:before{
+            content: url(/img/icons/download.svg);
+            margin-right: .5em;
+        }
+    }
+
+    &:hover{
+        box-shadow: 0px 15px 15px 0px rgba(47, 128, 237, 0.50);
+    }
+}
+
+.landing .social{
+    margin-top: 10em;
+}
+
+.social_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
+
+    li{
+        width: 8em;
+        height: 8em;
+    }
+}
+
+/*-----DESCRIPTION-----*/
+
+.description{
+    width: 40vw;
+    margin: 0 auto;
+
+    h2{
+        @include ModeratBold;
+        font-size: 2.25rem;
+    }
+
+    p{
+        @include ModeratRegular;
+        font-size: 1.5rem;
+        line-height: 1.6875em;
+    }
+
+    em{
+        font-style: normal;
+    }
+}
+
+/*-----REALISATIONS-----*/
+
+.realisations{
+    margin-top: 15em;
+
+    .title{
+        width: 40vw;
+        margin: 0 auto;
+        margin-bottom: 5em;
+    }
+    h2{
+        margin: 0;
+        @include ModeratBold;
+        font-size: 3rem;
+    }
+    h3{
+        margin: 0;
+        @include ModeratRegular;
+        font-size: 2.25rem;
+    }
+}
+
+.works_links{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    a{
+        overflow: hidden;
+        height: 500px;
+        width: 40%;
+        transition: all .5s;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    a:first-child{
+        flex-basis: 60%;
+        position: relative;
+        img{
+            position: absolute;
+            bottom: -20em;
+        }
+    }
+    a:last-child{
+        flex-basis: 60%;
+        img{
+            height: 100%;
+        }
+    }
+}
+/*il faudra créer une classe pour l'état hover, qu'on activera avec du JS*/
+
+/*-----SERVICES-----*/
+
+.services{
+    background-color: $black;
+    padding: 10em 0;
+}
+
+.services_title{
+    @include ModeratBold;
+    font-size: 2.25rem;
+    color: $white;
+    
+    h2{
+        margin: 0;
+    }
+
+    span{
+        text-transform: uppercase;
+        font-size: .875rem;
+        letter-spacing: .1em;
+    }
+}
+
+.services_grid{
+    margin-top: 5em;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+.service{
+    background: $white;
+    border-radius: 5px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+
+    h3{
+        @include ModeratBold;
+        font-size: 1.5rem;
+        margin: 0;
+        margin-bottom: .5em;
+    }
+
+    p{
+        @include ModeratRegular;
+        font-size: 1.125rem;
+        margin: 0;
+        line-height: 1.725rem;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    li{
+        @include ModeratRegular;
+        font-size: 1.125rem;
+        line-height: 1.725rem;
+    }
+    span{
+        font-weight: 700;
+    }
+}
+
+.emoji{
+    width: 9.375rem;
+}
+
+.service_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-right: 6.25rem;
+}
+
+.UX_service .emoji{
+    background-image: url(/img/emoji/ok.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.code_service .emoji{
+    background-image: url(/img/emoji/tools.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.transmedia_service .emoji{
+    background-image: url(/img/emoji/rocket.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tags_service .emoji{
+    background-image: url(/img/emoji/yeah.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.comm_service .emoji {
+    background-image: url(/img/emoji/shout.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*-----EXPERIENCE PRO-----*/
+
+.experience{
+    width: 50vw;
+    margin: 0 auto;
+    padding-top: 15em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.experience_title{
+    text-align: right;
+    @include ModeratRegular;
+    font-size: 1.125rem;
+    line-height: 1.725rem;
+
+    h2{
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+.pro_blocks{
+    @include ModeratRegular;
+    font-size: 1.125rem;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li{
+        border-radius: 5px;
+        background-color: $white;
+        box-shadow: 0px 10px 15px 0px rgba($color: #000000, $alpha: .25);
+    }
+}
+
+.pro_title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2em;
+    height: 120px;
+
+    img{
+        order: -1;
+        margin-right: 1em;
+    }
+    span{
+        display: block;
+        font-size: .875rem;
+        font-weight: 400;
+    }
+}
+
+.pro_dropdown{
+    margin-left: auto;
+    height: 45px;
+    width: 45px;
+    background-color: $gris;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    background-image: url(/img/icons/chevron.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: ease-in-out .3s;
+}
+
+.pro_link{
+    color: $black;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+
+    &:hover{
+        &::before{
+            content: "";
+            display: block;
+            width: 100%;
+            border-bottom: 3px solid $black;
+            position: absolute;
+            bottom: -.3em;
+        }
+    }
+
+    &:after{
+        content: url(/img/icons/external_link.svg);
+        margin-left: .5em;
+    }
+}
+
+.pro_details{
+    padding: 2em;
+    padding-top: 0;
+
+    h4{
+        margin: 0;
+        font-size: 1.125rem;
+    }
+
+    ul{
+        margin: 1em 0;
+    }
+    li{
+        box-shadow: none;
+        font-size: 1.125rem;
+        margin-bottom: .2em;
+    }
+    span{
+        display: block;
+    }
+    p{
+        font-weight: 700;
+    }
+}
+
+.pro_twist{
+    margin: 3em 0;
+
+    .pro_details li a{
+        color: $accent;
+        text-decoration: none;
+        font-size: .875rem;
+        transition: all .5s;
+
+        &:hover{
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+    .pro_details li span::before{
+        content: "🡒 ";
+        margin-left: 2em;
+    }
+}
+
+/*-----TESTIMONIALS-----*/
+
+.testimonials{
+    margin-top: 15em;
+    margin-bottom: 15em;
+
+    h2{
+        @include ModeratBold;
+        font-size: 2.25rem;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.les_avis{
+    margin-top: 5em;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.avis{
+    background: $white;
+    border-radius: 5px;
+    box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+
+    figure{
+        margin: 0 auto;
+        margin-top: 3em;
+        display: flex;
+        align-items: center;
+        width: 70%;
+        padding-bottom: 3em;
+        border-bottom: 1px solid $accent;
+    }
+    img{
+        border-radius: 45px;
+        border: 2px solid $white;
+        box-shadow: 0px 5px 5px 0px rgba($color: #000000, $alpha: .25);
+    }
+    figcaption{
+        margin-left: 2em;
+        @include ModeratRegular;
+    }
+    .avis_content{
+        width: 70%;
+        margin: 3em auto;
+        @include ModeratRegular;
+        font-size: 1.125rem;
+        line-height: 1.725rem;
+
+        &>span{
+            font-size: 5.625rem;
+            @include ModeratRegular;
+        }
+    }
+}
+
+.avis_name{
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.avis_position{
+    color: #BDBDBD;
+}

@@ -1,9 +1,12 @@
 @import '_variables.scss';
-
+*{
+    user-select: none;
+}
 body{
     font-size: 10pt;
     margin: 0;
     padding: 0;
+    padding-top: 75px;
 }
 
 .container{
@@ -25,11 +28,12 @@ h1{
     @include h1;
 }
 
-h2{
-    color:$accent;
-    @include h2;
+.rotate{
+    transform: rotate(-180deg);
 }
+
 
 @import '_nav.scss';
 @import '_social.scss';
+@import '_main.scss';
 @import '_footer.scss';
