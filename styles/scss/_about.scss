@@ -282,6 +282,7 @@
     margin-top: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .form_emojis{
@@ -316,8 +317,44 @@
     grid-column-start: 2;
 
     .form_emojis{
+        width: 120px;
         background-image: url(/img/emoji/ok.png), url(/img/emoji/tools.png), url(/img/emoji/yeah.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left, center, right;
     }
+}
+
+.designinnovation .form_emojis{
+    width: 75px;
+    background-image: url(/img/emoji/tools.png), url(/img/emoji/yeah.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+
+.talentquest .form_emojis{
+    width: 30px;
+    background-image: url(/img/emoji/ok.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mat .form_emojis{
+    width: 165px;
+    background-image: url(/img/emoji/ok.png), url(/img/emoji/rocket.png), url(/img/emoji/shout.png), url(/img/emoji/yeah.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left, 33%, 66%, right;
+}
+
+.heaj .form_emojis{
+    width: 30px;
+    background-image: url(/img/emoji/yeah.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /*-----CTA-----*/
