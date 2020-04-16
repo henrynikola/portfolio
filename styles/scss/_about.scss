@@ -1,0 +1,250 @@
+/*-----ABOUT ME-----*/
+
+.about{
+    margin-top: 15em;
+    margin-bottom: 10em;
+    h1{
+        font-size: 2.25rem;
+        margin: 0 auto;
+        width: 30vw;
+
+        span{
+            font-size: .875rem;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+    }
+
+    .social{
+        width: 480px;
+        margin: 0 auto;
+        margin-top: 10em;
+    }
+}
+
+.my_pic{
+    width: 60vw;
+    height: 660px;
+    margin: 0 auto;
+    margin-top: 10em;
+    background: $gris;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    figcaption{
+        width: 330px;
+        height: 360px;
+        background: $white;
+        box-sizing: border-box;
+        padding: 2em;
+        z-index: 1;
+        position: absolute;
+        top: calc(50% - 180px);
+        right: 10em;
+        border-radius: 5px;
+        box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+    }
+}
+
+.citation{
+    @include ModeratRegular;
+    font-size: 2rem;
+
+    p{
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    cite{
+        font-size: 1.125rem;
+        font-style: normal;
+    }
+}
+
+.underline{
+    position: relative;
+    @include ModeratBold;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: 1.2em;
+        left: 0;
+        border-bottom: 3px solid $black;
+    }
+}
+
+/*-----VALEURS-----*/
+
+.valeurs{
+    margin-top: 10em;
+    background-color: $accent;
+    padding: 5em 0;
+
+    h2{
+        text-align: center;
+        @include ModeratBold;
+        color: $white;
+        font-size: 2.25rem;
+        margin: 0;
+    }
+
+    .service{
+        height: 250px;
+    }
+}
+
+.passion_value h3{
+    position: relative;
+
+    &::before{
+        content: url(/img/emoji/passion.png);
+        position: absolute;
+        left: -2em;
+    }
+}
+
+.originality_value h3{
+    position: relative;
+
+    &::before{
+        content: url(/img/emoji/love.png);
+        position: absolute;
+        left: -2em;
+    }
+}
+
+.humble_value h3{
+    position: relative;
+
+    &::before{
+        content: url(/img/emoji/humble.png);
+        position: absolute;
+        left: -2em;
+    }
+}
+
+.team_value h3{
+    position: relative;
+
+    &::before{
+        content: url(/img/emoji/team.png);
+        position: absolute;
+        left: -2em;
+    }
+}
+
+/*-----SIGNATURES-----*/
+
+.design{
+    margin: 15em auto;
+    overflow-x: hidden;
+    position: relative;
+
+    h2{
+        text-align: center;
+        @include ModeratBold;
+        font-size: 2.25rem;
+        margin: 0;
+        margin-bottom: 5rem;
+    }
+
+    p{
+        @include ModeratRegular;
+        font-size: 1.5rem;
+        width: 35vw;
+        margin: 0 auto;
+    }
+
+    .typeform_link{
+        width: 200px;
+        margin-bottom: 5em;
+    }
+}
+
+.tags_grid{
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    grid-gap: 30px;
+    width: 100vw;
+}
+
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        transition: all .5s;
+    }
+
+    &:hover img{
+        transform: scale(1.2);
+        border-radius: 5px;
+        box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+    }
+}
+
+@keyframes move{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -6240px;
+    }
+}
+
+.tags_grid{ /*l'animation*/
+    animation-name: move;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.selection_travaux{
+    @include ModeratRegular;
+    font-size: 1.125rem;
+    color: $accent;
+    transform: rotate(-90deg);
+    position: absolute;
+    top:0;
+    left: 10rem;
+}
+
+
+/*-----FORMATION-----*/
+
+/*-----CTA-----*/
+.cta{
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 15em;
+
+    h2{
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        @include ModeratBold;
+        font-size: 2.25rem;
+    }
+}
+.typeform_link{
+    margin: 0 auto;
+    transition: all .5s;
+
+    &:hover{
+        box-shadow: 0px 15px 15px 0px rgba(47, 128, 237, 0.50);
+    }
+}

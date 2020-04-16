@@ -86,7 +86,10 @@ h1 {
   font-family: "Moderat Regular";
   font-weight: 400;
   font-size: 1.5em;
-  text-transform: capitalize;
+}
+
+.nav a::first-letter {
+  text-transform: uppercase;
 }
 
 .nav .home_link {
@@ -117,6 +120,10 @@ h1 {
           align-items: center;
 }
 
+.nav_links li:nth-child(2) {
+  position: relative;
+}
+
 .nav_links li:nth-child(2)::after {
   content: "";
   width: 24px;
@@ -133,6 +140,32 @@ h1 {
   background-image: url(/img/icons/external_link.svg);
   background-repeat: no-repeat;
   background-position: top center;
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 2.5em;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.sub_menu {
+  padding: 1.5em 3em;
+  border-radius: 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.sub_menu:hover {
+  background: #DC7855;
+}
+
+.sub_menu:after {
+  display: none;
 }
 
 .social {
@@ -424,6 +457,22 @@ h1 {
   width: 40%;
   -webkit-transition: all .5s;
   transition: all .5s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works_links a:hover::after {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220, 120, 85, 0.9);
+  z-index: 5;
+  position: absolute;
+  top: 0;
 }
 
 .works_links a img {
@@ -438,18 +487,93 @@ h1 {
   position: relative;
 }
 
+.works_links a:first-child::after {
+  content: "Architecture Transmédia";
+  color: #fff;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .works_links a:first-child img {
   position: absolute;
   bottom: -20em;
 }
 
+.works_links a:nth-child(2) {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.works_links a:nth-child(2)::after {
+  content: "UX/UI Design";
+  color: #fff;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works_links a:nth-child(3)::after {
+  content: "Illustrations web";
+  color: #fff;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .works_links a:last-child {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  min-width: 60%;
+}
+
+.works_links a:last-child:hover::after {
+  content: "Design graphique";
+  color: #fff;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .works_links a:last-child img {
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*il faudra créer une classe pour l'état hover, qu'on activera avec du JS*/
@@ -830,6 +954,292 @@ h1 {
 
 .avis_position {
   color: #BDBDBD;
+}
+
+/*-----ABOUT ME-----*/
+.about {
+  margin-top: 15em;
+  margin-bottom: 10em;
+}
+
+.about h1 {
+  font-size: 2.25rem;
+  margin: 0 auto;
+  width: 30vw;
+}
+
+.about h1 span {
+  font-size: .875rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.about .social {
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 10em;
+}
+
+.my_pic {
+  width: 60vw;
+  height: 660px;
+  margin: 0 auto;
+  margin-top: 10em;
+  background: #F2F2F2;
+  position: relative;
+}
+
+.my_pic img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.my_pic figcaption {
+  width: 330px;
+  height: 360px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2em;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 180px);
+  right: 10em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.citation {
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.citation p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.citation cite {
+  font-size: 1.125rem;
+  font-style: normal;
+}
+
+.underline {
+  position: relative;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 1.2em;
+  left: 0;
+  border-bottom: 3px solid #000;
+}
+
+/*-----VALEURS-----*/
+.valeurs {
+  margin-top: 10em;
+  background-color: #DC7855;
+  padding: 5em 0;
+}
+
+.valeurs h2 {
+  text-align: center;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.valeurs .service {
+  height: 250px;
+}
+
+.passion_value h3 {
+  position: relative;
+}
+
+.passion_value h3::before {
+  content: url(/img/emoji/passion.png);
+  position: absolute;
+  left: -2em;
+}
+
+.originality_value h3 {
+  position: relative;
+}
+
+.originality_value h3::before {
+  content: url(/img/emoji/love.png);
+  position: absolute;
+  left: -2em;
+}
+
+.humble_value h3 {
+  position: relative;
+}
+
+.humble_value h3::before {
+  content: url(/img/emoji/humble.png);
+  position: absolute;
+  left: -2em;
+}
+
+.team_value h3 {
+  position: relative;
+}
+
+.team_value h3::before {
+  content: url(/img/emoji/team.png);
+  position: absolute;
+  left: -2em;
+}
+
+/*-----SIGNATURES-----*/
+.design {
+  margin: 15em auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.design h2 {
+  text-align: center;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 0;
+  margin-bottom: 5rem;
+}
+
+.design p {
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 35vw;
+  margin: 0 auto;
+}
+
+.design .typeform_link {
+  width: 200px;
+  margin-bottom: 5em;
+}
+
+.tags_grid {
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[24];
+      grid-template-columns: repeat(24, 1fr);
+  grid-gap: 30px;
+  width: 100vw;
+}
+
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tag img {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.tag:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+@-webkit-keyframes move {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -6240px;
+  }
+}
+
+@keyframes move {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -6240px;
+  }
+}
+
+.tags_grid {
+  /*l'animation*/
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.selection_travaux {
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #DC7855;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  left: 10rem;
+}
+
+/*-----FORMATION-----*/
+/*-----CTA-----*/
+.cta {
+  width: 30vw;
+  margin: 0 auto;
+  margin-top: 15em;
+}
+
+.cta h2 {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+
+.typeform_link {
+  margin: 0 auto;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.typeform_link:hover {
+  -webkit-box-shadow: 0px 15px 15px 0px rgba(47, 128, 237, 0.5);
+          box-shadow: 0px 15px 15px 0px rgba(47, 128, 237, 0.5);
 }
 
 .footer {

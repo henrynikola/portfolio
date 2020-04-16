@@ -182,6 +182,18 @@
         height: 500px;
         width: 40%;
         transition: all .5s;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:hover::after{
+            width: 100%;
+            height: 100%;
+            background-color: $accenttransparent;
+            z-index: 5;
+            position: absolute;
+            top: 0;
+        }
 
         img{
             width: 100%;
@@ -192,15 +204,64 @@
     a:first-child{
         flex-basis: 60%;
         position: relative;
+
+        &::after{
+            content: "Architecture Transmédia";
+            color: $white;
+            @include ModeratBold;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         img{
             position: absolute;
             bottom: -20em;
         }
     }
+
+    a:nth-child(2){
+        align-items: flex-start;
+
+        &::after{
+            content: "UX/UI Design";
+            color: $white;
+            @include ModeratBold;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    a:nth-child(3){
+        &::after{
+            content: "Illustrations web";
+            color: $white;
+            @include ModeratBold;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     a:last-child{
-        flex-basis: 60%;
+        min-width: 60%;
+
+        &:hover::after{
+            content: "Design graphique";
+            color: $white;
+            @include ModeratBold;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         img{
             height: 100%;
+            object-fit: cover;
         }
     }
 }
