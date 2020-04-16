@@ -1108,6 +1108,7 @@ h1 {
 /*-----SIGNATURES-----*/
 .design {
   margin: 15em auto;
+  margin-bottom: 5em;
   overflow-x: hidden;
   position: relative;
 }
@@ -1194,8 +1195,8 @@ h1 {
   /*l'animation*/
   -webkit-animation-name: move;
           animation-name: move;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -1215,6 +1216,123 @@ h1 {
 }
 
 /*-----FORMATION-----*/
+.formation {
+  background-color: #DC7855;
+  padding: 5rem 0;
+}
+
+.formation h2 {
+  color: #fff;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.formation p {
+  color: #fff;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.formations {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
+  grid-gap: 30px;
+}
+
+.school {
+  background-color: #fff;
+  height: 250px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  font-size: 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.school h3 {
+  margin: 0;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.school p {
+  color: #000;
+  margin: 0;
+}
+
+.school_more {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form_emojis {
+  height: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.school_link {
+  font-size: .875rem;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.school_link:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-bottom: 2px solid #000;
+  bottom: -.5rem;
+}
+
+.school_link:after {
+  content: url(/img/icons/external_link.svg);
+  margin-left: .5rem;
+}
+
+.technobel {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.technobel .form_emojis {
+  background-image: url(/img/emoji/ok.png), url(/img/emoji/tools.png), url(/img/emoji/yeah.png);
+}
+
 /*-----CTA-----*/
 .cta {
   width: 30vw;
