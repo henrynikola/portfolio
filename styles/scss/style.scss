@@ -32,6 +32,10 @@ h1{
     transform: rotate(-180deg);
 }
 
+.pause{
+    animation-play-state: paused;
+}
+
 
 @import '_nav.scss';
 @import '_social.scss';

@@ -189,12 +189,12 @@
 
     img{
         transition: all .5s;
-    }
 
-    &:hover img{
-        transform: scale(1.2);
-        border-radius: 5px;
-        box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+        &:hover{
+            transform: scale(1.2);
+            border-radius: 5px;
+            box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+        }
     }
 }
 
@@ -229,6 +229,7 @@
 .formation{
     background-color: $accent;
     padding: 5rem 0;
+    position: relative;
     h2{
         color: $white;
         @include ModeratBold;
@@ -240,6 +241,15 @@
         color:$white;
         @include ModeratRegular;
         font-size: 1.125rem;
+    }
+}
+
+.formation_title{
+    position: absolute;
+    width: 25%;
+
+    p{
+        line-height: 1.725rem;
     }
 }
 
@@ -275,6 +285,7 @@
     p{
         color: $black;
         margin: 0;
+        width: 100%;
     }
 }
 

@@ -56,6 +56,11 @@ h1 {
           transform: rotate(-180deg);
 }
 
+.pause {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .nav {
   height: 75px;
   width: 100vw;
@@ -1165,7 +1170,7 @@ h1 {
   transition: all .5s;
 }
 
-.tag:hover img {
+.tag img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border-radius: 5px;
@@ -1219,6 +1224,7 @@ h1 {
 .formation {
   background-color: #DC7855;
   padding: 5rem 0;
+  position: relative;
 }
 
 .formation h2 {
@@ -1234,6 +1240,15 @@ h1 {
   font-family: "Moderat Regular";
   font-weight: 400;
   font-size: 1.125rem;
+}
+
+.formation_title {
+  position: absolute;
+  width: 25%;
+}
+
+.formation_title p {
+  line-height: 1.725rem;
 }
 
 .formations {
@@ -1281,6 +1296,7 @@ h1 {
 .school p {
   color: #000;
   margin: 0;
+  width: 100%;
 }
 
 .school_more {
