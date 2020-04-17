@@ -31,3 +31,20 @@ myAboutLink.addEventListener("mouseenter", e=>{
 myAboutLink.addEventListener("mouseleave", ev=>{
     myDropdown.classList.add('hidden')
 })
+
+
+/*-----HOVER WORKS-----*/
+
+let myWorks = document.querySelector('.my_works')
+let projet = myWorks.querySelectorAll('.projet')
+
+projet.forEach(element => {
+    element.addEventListener("mouseenter", e=>{
+        let thumbnail = element.querySelector('.thumbnail')
+        thumbnail.classList.remove('hidden')
+    })
+    element.addEventListener("mouseleave", e=>{
+        let thumbnail = element.querySelector('.thumbnail')
+        thumbnail.classList.add('hidden')
+    })
+});

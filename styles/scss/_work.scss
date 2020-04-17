@@ -1,0 +1,102 @@
+.projects{
+    margin-top: 5rem;
+
+    h1{
+        margin: 0;
+        font-size: 4.5rem;
+    }
+}
+
+.works{
+    margin-top: 5rem;
+}
+
+.my_works{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    grid-auto-flow: row;
+}
+
+.projet{
+    height: 60vh;
+
+    a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+.projet_details{
+    margin-top: auto;
+    height: 40%;
+    @include ModeratRegular;
+    font-size: 1.125rem;
+    line-height: 1.725rem;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        top: -5rem;
+        left: 0;
+    }
+
+    h2{
+        @include ModeratBold;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        margin: 0;
+    }
+}
+
+.ux_projet .projet_details::before{
+    content: url(/img/emoji/ok.png);
+}
+
+.transmedia_projet .projet_details::before{
+    content: url(/img/emoji/rocket.png);
+}
+
+.design_projet .projet_details::before{
+    content: url(/img/emoji/yeah.png);
+}
+
+.illu_projet .projet_details::before{
+    content: url(/img/emoji/chocolate_2.png);
+}
+
+.thumbnail{
+    width: 100%;
+    height: 40%;
+    transition: all .5s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px 0px rgba($color: #000000, $alpha: .25);
+}
+
+.transmedia_projet .thumbnail{
+    background-image: url(/img/content/amal_cover.jpg);
+    background-position: 0% 80%;
+}
+
+.ux_projet .thumbnail{
+    background-image: url(/img/content/playzone_photo3.png);
+}
+
+.design_projet .thumbnail{
+    background-image: url(/img/content/tag_cover.png);
+}
+
+.illu_projet .thumbnail{
+    background-image: url(/img/content/vector_2.png);
+}
