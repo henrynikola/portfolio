@@ -163,7 +163,7 @@
     background-image: url(/img/emoji/detective.png);
 }
 
-/*-----UX CASE STUDY-----*/
+/*-----CASE STUDIES-----*/
 
 .ux_case_study, .ui_case_study, .transmedia_case_study, .design_case_study, .illu_case_study{
     font-size: 1.5rem;
@@ -171,6 +171,10 @@
 
     section{
         margin-bottom: 10rem;
+    }
+
+    .idee{
+        margin-bottom: 35rem;
     }
 
     h3{
@@ -182,8 +186,331 @@
     p{
         line-height: 2.5rem;
     }
+    
+    em{
+        font-style: normal;
+    }
 }
 
 .ux_case_study, .design_case_study, .illu_case_study{
     @include case_center;
+}
+
+.playtogne{
+    position: relative;
+    overflow-x: hidden;
+
+    img{
+        max-width: 100%;
+    }
+
+    &::after{
+        content: "";
+        background-image: url(/img/content/playzone_photo1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 20vw;
+        height: 700px;
+        display: block;
+        position: absolute;
+        top: 160vh;
+        right: 0;
+    }
+}
+
+/*-----UX CASE STUDY-----*/
+
+.idee{
+    background-color: $white;
+    outline: 5em solid $white;
+    position: relative;
+
+    &::after{
+        content: "";
+        background-image: url(/img/content/playzone_photo2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        width: 50vw;
+        height: 620px;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: -30vw;
+    }
+}
+
+.audience_content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10rem;
+    margin-top: 5rem;
+}
+
+.users_types{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.users{
+    width: 60%;
+    h4{
+        font-size: 2.25rem;
+        margin: 0;
+        margin-bottom: 1rem;
+
+        span{
+            display: block;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.ux_features{
+    margin: 0 -10rem;
+    padding: 0;
+    list-style: none;
+
+    li{
+        background-color: $accent;
+        display: flex;
+        border-radius: 5px;
+        padding: 3rem 0;
+        margin: 3rem auto;
+
+        h4, p{
+            margin: 0;
+            line-height: 30px;
+            font-size: 1.5rem;
+        }
+
+        h4{
+            margin-right: .5rem;
+            &::before{
+                content: url(/img/icons/notification.svg);
+                margin: 0 3rem;
+            }
+            &::after{
+                content: "-";
+                margin-left: .5rem;
+            }
+        }
+    }
+    li:nth-of-type(2) h4::before{
+        content: url(/img/icons/content.svg);
+    }
+    li:last-of-type h4::before{
+        content: url(/img/icons/view.svg);
+    }
+}
+
+.parcours{
+    margin: 0 -20rem;
+    margin-bottom: 5rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5rem;
+    text-align: center;
+    line-height: 2rem;
+    position: relative;
+
+    &:before{
+        content: "";
+        display: block;
+        height: 2px;
+        border-bottom: 2px solid $black;
+        width: 200%;
+        position: absolute;
+        margin: 0 -20em;
+        top: 100px;
+        left: 0;
+    }
+}
+
+.step h4{
+    font-size: 2.25rem;
+    @include ModeratRegular;
+    position: relative;
+
+    &:after{
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: $accent;
+        border-radius: 15px;
+        top: 47px;
+        left: 50%;
+        transform: translateX(-7px);
+    }
+}
+
+.step ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+        margin: 1rem 0;
+    }
+}
+
+/*-----UI CASE STUDY-----*/
+
+.ui_case_study{
+    h2{
+        @include ModeratRegular;
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 15rem;
+
+        span{
+            display: block;
+            font-size: 2.25rem;
+        }
+    }
+}
+
+.en_pratique{
+    width: 50vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.processus{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: my-counter;
+
+    li{
+        background-color: $white;
+        box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+        border-radius: 5px;
+        height: 150px;
+        margin-bottom: 3rem;
+        counter-increment: my-counter;
+        display: flex;
+        align-items: center;
+        transition: all .5s;
+
+        &::before{
+            content: "0" counter(my-counter);
+            color: $accent;
+            font-size: 2.25rem;
+            margin: 3rem;
+            @include ModeratBold;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    li:last-of-type{
+        &::after{
+            content: url(/img/icons/figma.svg);
+            margin-right: 3rem;
+        }
+    }
+}
+
+.wireframe{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 5rem;
+    margin: 0 auto;
+    width: 40vw;
+
+    img{
+        box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+        border-radius: 5px;
+    }
+}
+
+.color_title{
+    text-align: center;
+    padding-top: 5rem; //c'est dégueulasse mais ça fonctionne alors yolo
+}
+
+.couleurs{
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.color{
+    text-align: center;
+    position: relative;
+
+    p{
+        margin: 0;
+        margin-bottom: .2rem;
+        color: #828282;
+        font-size: 1.5rem;
+    }
+
+    span{
+        font-size: 1.125rem;
+        margin: 0;
+    }
+}
+
+.color::before{
+    content: "";
+    width: 90px;
+    height: 90px;
+    border-radius: 30px;
+    box-shadow: 0px 15px 15px 0px rgba($color: #000000, $alpha: .25);
+    background-color: #159300;
+    display: block;
+    position: absolute;
+    left: calc(50% - 45px);
+    top: -7rem;
+}
+
+.color:nth-of-type(2)::before{
+    background-color: $black;
+}
+.color:nth-of-type(3)::before{
+    background-color: #DEDEDE;
+}
+.color:last-of-type::before{
+    background-color: $white;
+}
+
+/*-----PLAYTOGNE RESULT-----*/
+
+.result{
+    h2{
+        @include ModeratRegular;
+        font-size: 6rem;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 5rem;
+    }
+    p{
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+        @include ModeratRegular;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        width: 40vw;
+    }
+    iframe{
+        margin: 0 auto;
+        display: block;
+        margin-top: 5rem;
+    }
 }
