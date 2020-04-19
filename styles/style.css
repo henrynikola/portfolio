@@ -15,6 +15,7 @@
 
 /*Style H1*/
 /*Style H2*/
+/*Case study center*/
 /*Couleurs*/
 * {
   -webkit-user-select: none;
@@ -131,6 +132,13 @@ h1 {
   background-image: url(/img/icons/chevron.svg);
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav_links li:nth-child(2):hover::after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .nav_links li:last-child::after {
@@ -1524,6 +1532,241 @@ h1 {
 
 .illu_projet .thumbnail {
   background-image: url(/img/content/vector_2.png);
+}
+
+.playzone, .transmedia, .signature, .illu_web {
+  margin-top: 10rem;
+}
+
+.playzone h1, .transmedia h1, .signature h1, .illu_web h1 {
+  text-align: center;
+  margin: 0;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  font-size: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+}
+
+.playzone h1 span, .transmedia h1 span, .signature h1 span, .illu_web h1 span {
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  font-size: 2.25rem;
+}
+
+.playzone .overview_title::after, .transmedia .overview_title::after, .signature .overview_title::after, .illu_web .overview_title::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: .2em;
+}
+
+.second_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second_nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+}
+
+.second_nav a p {
+  position: relative;
+  margin: 0;
+}
+
+.second_nav a p::before {
+  content: "";
+  background-image: url(/img/icons/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.second_nav a span {
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  display: block;
+  margin-top: .5rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.second_nav a:last-of-type {
+  text-align: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.second_nav a:last-of-type p::before {
+  content: "";
+  background: none;
+  margin: 0;
+}
+
+.second_nav a:last-of-type p::after {
+  content: "";
+  background-image: url(/img/icons/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  width: 32px;
+  height: 15px;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.case_type {
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.case_type span {
+  display: block;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+}
+
+.case_type span::first-letter {
+  text-transform: capitalize;
+}
+
+.overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10rem;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+}
+
+.overview h4 {
+  font-size: 1.5rem;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.overview p {
+  margin: 0;
+  margin-bottom: .5rem;
+  font-size: 1.125rem;
+}
+
+.overview_top, .overview_end {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.overview_title {
+  font-size: 3rem;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+  width: 50%;
+  margin: 2em 0;
+}
+
+.overview_title strong {
+  color: #000;
+  font-family: "Moderat Bold";
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: block;
+  margin: 0;
+}
+
+.playzone .overview_title::after {
+  background-image: url(/img/emoji/fox.png);
+}
+
+.transmedia .overview_title::after {
+  background-image: url(/img/emoji/detective.png);
+}
+
+/*-----UX CASE STUDY-----*/
+.ux_case_study, .ui_case_study, .transmedia_case_study, .design_case_study, .illu_case_study {
+  font-size: 1.5rem;
+  font-family: "Moderat Regular";
+  font-weight: 400;
+}
+
+.ux_case_study section, .ui_case_study section, .transmedia_case_study section, .design_case_study section, .illu_case_study section {
+  margin-bottom: 10rem;
+}
+
+.ux_case_study h3, .ui_case_study h3, .transmedia_case_study h3, .design_case_study h3, .illu_case_study h3 {
+  color: #DC7855;
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+.ux_case_study p, .ui_case_study p, .transmedia_case_study p, .design_case_study p, .illu_case_study p {
+  line-height: 2.5rem;
+}
+
+.ux_case_study, .design_case_study, .illu_case_study {
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 10rem;
 }
 
 .footer {
