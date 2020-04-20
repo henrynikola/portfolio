@@ -76,7 +76,11 @@
         height: 5px;
         display: block;
         position: absolute;
-        border-bottom: 2px solid $black;
+        border-bottom: 3px solid $black;
+    }
+
+    &:hover{
+        color: $black;
     }
 }
 
@@ -143,6 +147,11 @@
         display: block;
         margin-top: 2.5em;
         font-style: normal;
+
+        &:hover{
+            color: $black;
+            @include ModeratBold;
+        }
     }
 }
 

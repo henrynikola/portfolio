@@ -1,3 +1,15 @@
+/*-----GO TOP BUTTON-----*/
+
+let myTop = document.querySelector('.top')
+console.log(myTop)
+let myScroll = window.scrollY
+console.log(myScroll)
+
+
+if (myScroll > 1000) {
+    myTop.classList.add('hidden')
+}
+
 /*-----EXPERIENCE PRO ACCORDEON*/
 
 let myButton = document.querySelectorAll('.pro_dropdown');
