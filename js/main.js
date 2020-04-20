@@ -2,13 +2,16 @@
 
 let myTop = document.querySelector('.top')
 console.log(myTop)
-let myScroll = window.scrollY
-console.log(myScroll)
 
-
-if (myScroll > 1000) {
-    myTop.classList.add('hidden')
-}
+window.addEventListener('scroll', e=> {
+    let myScroll = window.scrollY
+    console.log(myScroll)
+    if (myScroll >= 2000) {
+        myTop.classList.remove('hidden')
+    } else {
+        myTop.classList.add('hidden')
+    }
+  })
 
 /*-----EXPERIENCE PRO ACCORDEON*/
 
