@@ -167,10 +167,15 @@
         margin: 0;
         @include ModeratBold;
         font-size: 1.125rem;
+
+        @include mobile{
+            font-size: .825rem;
+        }
     }
     .heart{
         display: inline-block;
-        width: 18px;
+        width: 14px;
+
         &::after{
             content: "";
             background-image: url(/img/icons/heart.svg);
@@ -179,6 +184,10 @@
             width: 18px;
             height: 18px;
             display: block;
+                @include mobile{
+                    width: 14px;
+                    height: 14px;
+                }
         }
     }
     .copyright{

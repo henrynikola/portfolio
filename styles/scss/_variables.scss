@@ -44,3 +44,12 @@ $accenttransparent: rgba($accent, .9);
 $bleu: #2F80ED;
 $gris: #F2F2F2;
 $shadow: 0px 15px 15px 0 rgba($black, .25);
+
+/*Media Queries*/
+
+$mobile-size: 361px;
+@mixin mobile{
+    @media screen and (max-width: #{$mobile-size}){
+        @content;
+    }
+};

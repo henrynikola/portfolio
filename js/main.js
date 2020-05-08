@@ -48,6 +48,27 @@ myAboutLink.addEventListener("mouseleave", ev=>{
 })
 
 
+/*-----MOBILE NAV-----*/
+
+let burgerIcon = document.querySelector('.burger-icon')
+let largeur = window.outerWidth
+console.log(largeur)
+
+
+if (largeur <= 360) {
+    myNav.classList.add('hidden')
+    myDropdown.classList.remove('hidden')
+}
+
+burgerIcon.addEventListener("touchend", e=> {
+    myNav.classList.toggle('hidden')
+    burgerIcon.classList.toggle('cross')
+    e.preventDefault()
+})
+
+
+
+
 /*-----HOVER WORKS-----*/
 
 let myWorks = document.querySelector('.my_works')
@@ -63,3 +84,5 @@ projet.forEach(element => {
         thumbnail.classList.add('hidden')
     })
 });
+
+
