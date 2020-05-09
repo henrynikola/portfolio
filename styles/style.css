@@ -562,9 +562,9 @@ h1 {
 @media screen and (max-width: 361px) {
   .landing {
     width: 100%;
-    height: 80vh;
+    height: auto;
     margin: 0;
-    margin-top: 10rem;
+    margin-top: 15vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -766,7 +766,7 @@ h1 {
 
 @media screen and (max-width: 361px) {
   .landing .social {
-    margin: 0 auto;
+    margin: 15vh auto;
     width: 60vw;
   }
 }
@@ -957,6 +957,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .works_links a:first-child img {
@@ -1422,6 +1423,12 @@ h1 {
   margin: 3em 0;
 }
 
+@media screen and (max-width: 361px) {
+  .pro_twist li span {
+    margin-left: 2em;
+  }
+}
+
 .pro_twist .pro_details li a {
   color: #DC7855;
   text-decoration: none;
@@ -1438,6 +1445,13 @@ h1 {
 .pro_twist .pro_details li span::before {
   content: "🡒 ";
   margin-left: 2em;
+}
+
+@media screen and (max-width: 361px) {
+  .pro_twist .pro_details li span::before {
+    content: "";
+    margin: 0;
+  }
 }
 
 /*-----TESTIMONIALS-----*/
