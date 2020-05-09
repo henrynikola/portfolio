@@ -15,8 +15,12 @@ body{
     width: 1366px;
     display: block;
     margin: 0 auto;
-}
 
+    @include mobile{
+        width: 100%;
+        box-sizing: content-box;
+    }
+}
 
 .accent{
     color: $accent;
@@ -117,4 +121,8 @@ h1{
 
 .hidden{
     display: none;
+}
+
+.noscroll{
+    position: fixed;
 }

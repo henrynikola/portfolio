@@ -10,6 +10,14 @@
     margin: 12em auto;
     display: flex;
     justify-content: space-between;
+
+    @include mobile{
+        width: 100%;
+        height: 80vh;
+        margin: 0;
+        margin-top: 10rem;
+        flex-direction: column;
+    }
 }
 
 .welcome{
@@ -19,13 +27,27 @@
     height: 350px;
     position: relative;
 
+    @include mobile{
+        height: 80%;
+        justify-content: flex-start;
+    }
+
     h1{
         margin: 0;
         font-size: 4rem;
+
+        @include mobile{
+            font-size: 3rem;
+            padding-left: 1rem;
+        }
         &::before{
             content: url(/img/emoji/hello.gif);
             position: absolute;
             left: -1em;
+
+            @include mobile{
+                display: none;
+            }
         }
     }
 }
@@ -37,10 +59,20 @@
     flex-direction: column;
     justify-content: flex-start;
 
+    @include mobile{
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        margin: 1rem 0;
+    }
+
     h2{
         font-size: 3rem;
         @include ModeratRegular;
         margin: 0;
+
+        @include mobile{
+            font-size: 2.5rem;
+        }
     }
 
     p{
@@ -56,6 +88,12 @@
 .resume{
     display: flex;
 
+    @include mobile{
+        width: 100%;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
     &>a{
         color: $black;
         text-decoration: none;
@@ -64,6 +102,10 @@
         margin-left: 2em;
         align-self: center;
         position: relative;
+
+        @include mobile{
+            margin-left: 0;
+        }
 
         &:hover{
             &::before{
@@ -89,6 +131,11 @@
     border-radius: 30px;
     transition: all .5s;
 
+    @include mobile{
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+
     a{
         width: 100%;
         height: 100%;
@@ -113,6 +160,11 @@
 
 .landing .social{
     margin-top: 10em;
+
+    @include mobile{
+        margin: 0 auto;
+        width: 60vw;
+    }
 }
 
 .social_grid{
@@ -121,9 +173,17 @@
     grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: column;
 
+    @include mobile{
+        text-align: center;
+    }
+
     li{
         width: 8em;
         height: 8em;
+
+        @include mobile{
+            width: auto;
+        }
     }
 }
 
@@ -132,6 +192,10 @@
 .description{
     width: 40vw;
     margin: 0 auto;
+
+    @include mobile {
+        display: none;
+    }
 
     h2{
         @include ModeratBold;
@@ -154,10 +218,21 @@
 .realisations{
     margin-top: 15em;
 
+    @include mobile{
+        margin-top: 10rem;
+    }
+
     .title{
         width: 40vw;
         margin: 0 auto;
         margin-bottom: 5em;
+
+        @include mobile{
+            width: 100%;
+            padding: 0 1rem;
+            box-sizing: border-box;
+            text-align: center;
+        }
     }
     h2{
         margin: 0;
@@ -177,6 +252,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    @include mobile{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
     a{
         overflow: hidden;
         height: 500px;
@@ -186,7 +266,12 @@
         display: flex;
         align-items: center;
 
-        &:hover::after{
+        @include mobile{
+            width: 100%;
+            height: 256px;
+        }
+
+        &:hover::after, :active::after{
             width: 100%;
             height: 100%;
             background-color: $accenttransparent;
@@ -205,6 +290,11 @@
         flex-basis: 60%;
         position: relative;
 
+        @include mobile{
+            flex-basis: 100%;
+            max-height: 256px;
+        }
+
         &::after{
             content: "Architecture Transmédia";
             color: $white;
@@ -218,6 +308,10 @@
         img{
             position: absolute;
             bottom: -20em;
+
+            @include mobile{
+                position: static;
+            }
         }
     }
 
@@ -236,6 +330,12 @@
     }
 
     a:nth-child(3){
+
+        img{
+            @include mobile{
+                transform: scale(1.5);
+            }
+        }
         &::after{
             content: "Illustrations web";
             color: $white;
@@ -272,12 +372,24 @@
 .services{
     background-color: $black;
     padding: 10em 0;
+
+    @include mobile{
+        width: 100vw;
+        padding: 5rem 1rem;
+        box-sizing: border-box;
+    }
 }
 
 .services_title{
     @include ModeratBold;
     font-size: 2.25rem;
     color: $white;
+
+    @include mobile{
+        text-align: center;
+        font-size: 1.75rem;
+        width: 100%;
+    }
     
     h2{
         margin: 0;
@@ -292,6 +404,11 @@
 
 .services_grid{
     margin-top: 5em;
+
+    @include mobile{
+        width: 100%;
+    }
+
     ul{
         list-style: none;
         margin: 0;
@@ -299,6 +416,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
+
+        @include mobile{
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
     }
 }
 
@@ -309,11 +431,21 @@
     display: flex;
     justify-content: flex-start;
 
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
     h3{
         @include ModeratBold;
         font-size: 1.5rem;
         margin: 0;
         margin-bottom: .5em;
+
+        @include mobile{
+            text-align: center;
+        }
     }
 
     p{
@@ -321,10 +453,18 @@
         font-size: 1.125rem;
         margin: 0;
         line-height: 1.725rem;
+
+        @include mobile{
+            display: none;
+        }
     }
     ul{
         display: flex;
         flex-direction: column;
+
+        @include mobile{
+            display: none;
+        }
     }
     li{
         @include ModeratRegular;
@@ -338,6 +478,10 @@
 
 .emoji{
     width: 9.375rem;
+    
+    @include mobile{
+        height: 30%;
+    }
 }
 
 .service_content{
@@ -346,6 +490,10 @@
     justify-content: center;
     width: 100%;
     padding-right: 6.25rem;
+
+    @include mobile{
+        padding-right: 0;
+    }
 }
 
 .UX_service .emoji{
@@ -387,6 +535,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+
+    @include mobile{
+        width: 100vw;
+        padding: 0 1rem;
+        padding-top: 5rem;
+        grid-template-columns: 1fr;
+        box-sizing: border-box;
+    }
 }
 
 .experience_title{
@@ -394,6 +550,10 @@
     @include ModeratRegular;
     font-size: 1.125rem;
     line-height: 1.725rem;
+
+    @include mobile{
+        text-align: center;
+    }
 
     h2{
         font-size: 2.25rem;
@@ -434,6 +594,10 @@
         display: block;
         font-size: .875rem;
         font-weight: 400;
+
+        @include mobile{
+            width: 120px;
+        }
     }
 }
 
@@ -524,6 +688,10 @@
 .testimonials{
     margin-top: 15em;
     margin-bottom: 15em;
+
+    @include mobile{
+        display: none;
+    }
 
     h2{
         @include ModeratBold;

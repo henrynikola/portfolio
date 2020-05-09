@@ -5,7 +5,7 @@ console.log(myTop)
 
 window.addEventListener('scroll', e=> {
     let myScroll = window.scrollY
-    console.log(myScroll)
+    //console.log(myScroll)
     if (myScroll >= 2000) {
         myTop.classList.remove('hidden')
     } else {
@@ -53,6 +53,7 @@ myAboutLink.addEventListener("mouseleave", ev=>{
 let burgerIcon = document.querySelector('.burger-icon')
 let largeur = window.outerWidth
 console.log(largeur)
+let body = document.querySelector('body')
 
 
 if (largeur <= 360) {
@@ -60,13 +61,12 @@ if (largeur <= 360) {
     myDropdown.classList.remove('hidden')
 }
 
-burgerIcon.addEventListener("touchend", e=> {
-    myNav.classList.toggle('hidden')
-    burgerIcon.classList.toggle('cross')
+burgerIcon.addEventListener("touchend", e=> { //quand je touche la burger icon
+    myNav.classList.toggle('hidden') //je toggle la visibilité de la nav
+    burgerIcon.classList.toggle('cross') //je toggle l'animation sur la burger icon
+    body.classList.toggle('noscroll') //je toggle le scroll sur le body
     e.preventDefault()
 })
-
-
 
 
 /*-----HOVER WORKS-----*/

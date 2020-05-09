@@ -1,6 +1,11 @@
 .footer{
     width: 100%;
     margin-top: 10em;
+
+    @include mobile{
+        padding-bottom: 5rem;
+        text-align: center;
+    }
 }
 
 .footer_block{
@@ -9,8 +14,22 @@
     margin: 0 auto;
     margin-bottom: 15em;
 
+    @include mobile{
+        width: 100%;
+        margin-bottom: 0;
+        height: auto;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
     img{
         margin-bottom: 8em;
+
+        @include mobile{
+            margin-bottom: 4rem;
+            position: relative;
+            left: 8px;
+        }
     }
 }
 
@@ -22,6 +41,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+
+    @include mobile{
+        height: auto;
+        justify-content: flex-start;
+        align-content: center;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
 }
 
 .footer_title{
@@ -31,6 +58,12 @@
     display: flex;
     align-items: center;
     @include ModeratBold;
+
+    @include mobile{
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
     &::after{
         content: "";
         background-image: url(/img/emoji/happy.png);
@@ -38,17 +71,35 @@
         display: inline-block;
         width: 70px;
         height: 65px;
+
+        @include mobile{
+            display: none;
+        }
     }
 }
 
 .contact{
     height: 10em;
     margin-top: 5em;
+
+    @include mobile{
+        height: auto;
+        
+        .social{
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 5em;
+        }
+    }
 }
 
 .social_row{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
+    @include mobile{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 
     li{
@@ -77,6 +128,10 @@
         display: block;
         position: absolute;
         border-bottom: 3px solid $black;
+
+        @include mobile{
+            left: 5px;
+        }
     }
 
     &:hover{
@@ -114,6 +169,10 @@
     height: 270px;
     background-color: $accent;
     color: $white;
+
+    @include mobile{
+        display: none;
+    }
     
     &>div{
         position: relative;
@@ -162,6 +221,11 @@
     display: flex;
     align-items: center;
     margin-top: 20em;
+
+    @include mobile{
+        padding: 1rem;
+        display: none;
+    }
 
     p{
         margin: 0;
