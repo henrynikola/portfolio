@@ -1,6 +1,12 @@
 .projects{
     margin-top: 5rem;
 
+    @include mobile{
+        padding: 0 1rem;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
     h1{
         margin: 0;
         font-size: 4.5rem;
@@ -17,12 +23,21 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    gap: 30px;
     grid-auto-flow: row;
+
+    @include mobile{
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
 }
 
 .projet{
     height: 60vh;
+
+    @include mobile{
+        border-bottom: .3rem dotted $accent;
+    }
 
     a{
         width: 100%;
@@ -99,4 +114,13 @@
 
 .illu_projet .thumbnail{
     background-image: url(/img/content/vector_2.png);
+}
+
+
+.transmedia_projet{
+    padding-bottom: 5rem;
+}
+
+.illu_projet{
+    border-bottom: none;
 }

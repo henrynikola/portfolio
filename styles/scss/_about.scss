@@ -3,10 +3,21 @@
 .about{
     margin-top: 15em;
     margin-bottom: 10em;
+
+    @include mobile{
+        padding: 0 1rem;
+        width: 100vw;
+        box-sizing: border-box;
+    }
     h1{
         font-size: 2.25rem;
         margin: 0 auto;
         width: 30vw;
+
+        @include mobile{
+            width: 100%;
+            font-size: 2rem;
+        }
 
         span{
             font-size: .875rem;
@@ -20,6 +31,10 @@
         width: 480px;
         margin: 0 auto;
         margin-top: 10em;
+
+        @include mobile{
+            width: 60vw;
+        }
     }
 }
 
@@ -30,11 +45,19 @@
     margin-top: 10em;
     background: $gris;
     position: relative;
+    border-radius: 5px;
+
+    @include mobile{
+        height: 60vh;
+        width: 100%;
+        margin-bottom: 15rem;
+    }
 
     img{
         width: 100%;
         height: 100%;
         display: block;
+        object-fit: cover;
     }
 
     figcaption{
@@ -49,12 +72,24 @@
         right: 10em;
         border-radius: 5px;
         box-shadow: $shadow;
+
+        @include mobile{
+            right: -2rem;
+            top: calc(50% + 150px);
+            width: 250px;
+            height: auto;
+            padding: .2em;
+        }
     }
 }
 
 .citation{
     @include ModeratRegular;
     font-size: 2rem;
+
+    @include mobile{
+        font-size: 1.5rem;
+    }
 
     p{
         margin: 0;
@@ -82,12 +117,29 @@
     }
 }
 
+
+.about + .description{
+    @include mobile{
+        display: block;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+
+        p{
+            font-size: 1.25rem;
+        }
+    }
+}
 /*-----VALEURS-----*/
 
 .valeurs{
     margin-top: 10em;
     background-color: $accent;
     padding: 5em 0;
+
+    @include mobile{
+        padding: 5em 1rem;
+    }
 
     h2{
         text-align: center;
@@ -99,6 +151,19 @@
 
     .service{
         height: 250px;
+
+        @include mobile{
+            padding: 1rem;
+            height: auto;
+
+            h3{
+                margin-top: 4rem;
+            }
+
+            p{
+                display: block;
+            }
+        }
     }
 }
 
@@ -109,6 +174,11 @@
         content: url(/img/emoji/passion.png);
         position: absolute;
         left: -2em;
+
+        @include mobile{
+            top: -3rem;
+            left: calc(50% - 20px);
+        }
     }
 }
 
@@ -119,6 +189,11 @@
         content: url(/img/emoji/love.png);
         position: absolute;
         left: -2em;
+
+        @include mobile{
+            top: -3rem;
+            left: calc(50% - 20px);
+        }
     }
 }
 
@@ -129,6 +204,11 @@
         content: url(/img/emoji/humble.png);
         position: absolute;
         left: -2em;
+
+        @include mobile{
+            top: -3rem;
+            left: calc(50% - 20px);
+        }
     }
 }
 
@@ -139,6 +219,11 @@
         content: url(/img/emoji/team.png);
         position: absolute;
         left: -2em;
+
+        @include mobile{
+            top: -3rem;
+            left: calc(50% - 20px);
+        }
     }
 }
 
@@ -156,6 +241,12 @@
         font-size: 2.25rem;
         margin: 0;
         margin-bottom: 5rem;
+
+        @include mobile{
+            text-align: left;
+            width: 100%;
+            padding: 0 1rem;
+        }
     }
 
     p{
@@ -163,6 +254,13 @@
         font-size: 1.5rem;
         width: 35vw;
         margin: 0 auto;
+        line-height: 140%;
+
+        @include mobile{
+            width: 100%;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
     }
 
     .typeform_link{
@@ -222,6 +320,10 @@
     position: absolute;
     top:0;
     left: 10rem;
+
+    @include mobile{
+        display: none;
+    }
 }
 
 /*-----FORMATION-----*/
@@ -248,6 +350,14 @@
     position: absolute;
     width: 25%;
 
+    @include mobile{
+        width: 100%;
+        padding: 0 1rem;
+        position: static;
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+    }
+
     p{
         line-height: 1.725rem;
     }
@@ -260,7 +370,12 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-auto-flow: row;
-    grid-gap: 30px;
+    gap: 30px;
+
+    @include mobile{
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
 }
 
 .school{
@@ -276,10 +391,19 @@
     flex-direction: column;
     justify-content: flex-start;
 
+    @include mobile{
+        height: 300px;
+    }
+
     h3{
         margin: 0;
         margin-top: 1rem;
         font-size: 1.5rem;
+
+        @include mobile{
+            margin-bottom: .5rem;
+            font-size: 1.3rem;
+        }
     }
 
     p{
@@ -327,6 +451,10 @@
 .technobel{
     grid-column-start: 2;
 
+    @include mobile{
+        grid-column-start: unset;
+    }
+
     .form_emojis{
         width: 120px;
         background-image: url(/img/emoji/ok.png), url(/img/emoji/tools.png), url(/img/emoji/yeah.png);
@@ -373,6 +501,12 @@
     width: 30vw;
     margin: 0 auto;
     margin-top: 15em;
+
+    @include mobile{
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
 
     h2{
         text-align: center;

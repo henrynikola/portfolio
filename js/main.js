@@ -83,6 +83,11 @@ projet.forEach(element => {
         let thumbnail = element.querySelector('.thumbnail')
         thumbnail.classList.add('hidden')
     })
+
+    if (largeur <= 360) {
+        let myThumbnail = element.querySelector('.thumbnail')
+        myThumbnail.classList.remove('hidden')
+    }
 });
 
 
